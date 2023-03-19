@@ -25,7 +25,11 @@
     width: 150px;
     position: absolute;
     bottom: 0%;
-    animation: jump 500ms;
+    
+}
+
+.jump{
+    animation: jump 500ms ease-out;
 }
 
 @keyframes jump{
