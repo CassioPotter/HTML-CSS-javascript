@@ -18,12 +18,15 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()"  >
+    <div id="area" >
         interaja
     </div>
     <script>
-        function clicar(){
-            var a = window.document.getElementById('area')
+        var a = window.document.getElementById('area')
+
+        a.addEventListener('click', clicar)
+
+        function clicar(){    
             a.innerText = 'clicou'
             a.style.background = 'red'
         }
