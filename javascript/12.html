@@ -10,8 +10,24 @@
     <h1>
         Votos
     </h1>
+
     Qual a sua idade <input type="number" name="idade" id="idade"> anos
-    <input type="button" value="verificar" onclick="verificar">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar(){
+            var ida = window.document.getElementById('idade');
+            var res = window.document.getElementById('res');
+
+            res.innerHTML
+             
+            if (ida < 16){
+
+            }
+        }
+
+    </script>
     
 </body>
 </html>
