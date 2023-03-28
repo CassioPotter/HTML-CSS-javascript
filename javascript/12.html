@@ -18,21 +18,11 @@
     <script>
         function verificar(){
             var ida = window.document.getElementById('idade');
-            var res = window.document.getElementById('res');
+            var ress = window.document.getElementById('res');
 
-            res.innerHTML = `Voçê tem ${ida} anos.`
+            ress.innerHTML = `<p>Voçê tem ${ida} anos.</p>`;
              
-            if (ida < 16){
-                res.innerHTML += `<p>Voçê ainda não pode votar </p>`
-            }
-            else{
-                if (ida > 18){
-                    res.innerHTML += `<p>Seu voto é obrigatorio</p>`
-                }
-                else{
-                    res.innerHTML += `<p>Seu voto é opcional</p>`
-                }
-            }
+           
         }
 
     </script>
