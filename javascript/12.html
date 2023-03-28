@@ -20,10 +20,18 @@
             var ida = window.document.getElementById('idade');
             var res = window.document.getElementById('res');
 
-            res.innerHTML
+            res.innerHTML = `Voçê tem ${ida} anos.`
              
             if (ida < 16){
-
+                res.innerHTML += `<p>Voçê ainda não pode votar </p>`
+            }
+            else{
+                if (ida > 18){
+                    res.innerHTML += `<p>Seu voto é obrigatorio</p>`
+                }
+                else{
+                    res.innerHTML += `<p>Seu voto é opcional</p>`
+                }
             }
         }
 
