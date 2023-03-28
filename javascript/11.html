@@ -18,10 +18,11 @@
     
     <script>
         function verificar(){
-            var txtv = window.document.getElementById('#txtvel');
+            var txtv = window.document.getElementById('txtvel');
+            var res = window.document.getElementById('res');
             var vel = Number(txtv.value);
-            var res = window.document.getElementById('#res');
-            res.innerHTML = `Sua velocidade atual é de ${vel}`
+            
+            res.innerHTML = `Sua velocidade atual é de <strong> ${vel} Km/h </strong>`;
 
         }
     </script>
