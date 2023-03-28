@@ -19,8 +19,13 @@
         function verificar(){
             var ida = window.document.getElementById('idade');
             var ress = window.document.getElementById('res');
+            var i = Number(ida.value);
 
-            ress.innerHTML = `<p>Voçê tem ${ida} anos.</p>`;
+            ress.innerHTML = `Voçê tem ${i} anos`;
+
+            if (i < 16){
+                ress.innerHTML += `<p>Voçê ainda <strong>não</strong> pode votar</p>`
+            }
              
            
         }
