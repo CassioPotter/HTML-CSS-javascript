@@ -20,8 +20,13 @@
             var cont = window.document.getElementById('contador')
             var c = Number(cont.value)
             var res = window.document.getElementById('res')
+            var n = Number(1)
 
             res.innerHTML = `Voçê quer que eu repita ${c} vezes:`
+
+            while(n <= c){
+                res.innerHTML += `<p>Passo ${c} </p>`
+            }
 
         }
     </script>
