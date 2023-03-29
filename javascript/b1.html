@@ -27,7 +27,7 @@
         Com quantas pessoas vai ser dividida a conta.
     </h2>
 
-    <input type="number" name="pessoas" id="pessoas">
+    <input type="number" name="pessoas" id="pessoa">
     <br>
     <input type="button" value="calcular" onclick="calcular()">
     <div id="res"> </div>
@@ -36,9 +36,12 @@
         function calcular(){
             var com = window.document.getElementById('comanda')
             var pess = window.document.getElementById('pessoa')
-            var res = window.document.getElementById('res')    
+            var res = window.document.getElementById('res')  
+            var co = Number(com.value)
+            var p = Number(pess.value)
 
-            
+            res.innerHTML = `A conta deu ${co} e sera dividida por ${p} pessoas. `
+            res.innerHTML += `A conta de ${co/p} por pessoa`
         }
 
     </script>
