@@ -25,7 +25,9 @@
         function calcular(){
             var num = window.document.getElementById(numero)
             var n = Number(num.value)
-            
+            var res = window.document.getElementById(res)
+
+            res.innerHTML = `Voçê digitou o valor ${n} o antecessor é ${n--} e o sucessor é ${n++}`
         }
 
     </script>
