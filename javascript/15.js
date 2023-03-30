@@ -11,3 +11,6 @@ for (let pos = 0; pos < num.length; pos = pos + 1){
     console.log (`A posiçao ${pos} tem o valor ${num[pos]}`)
 }
 
+for (let pos in num) {
+    console.log (num.pos)
+}
