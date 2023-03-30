@@ -35,6 +35,7 @@
         background: rgb(43, 32, 32);
         color: white;
         margin: 3px;
+        border-radius: 15px;
     }
     .botao:hover{/*passa por cima*/
         background: rgb(97, 97, 126);
@@ -123,6 +124,10 @@
             if (resultado)
             {
                 window.document.getElementById('resultado').innerHTML = eval(resultado)
+            }
+            else
+            {
+                window.document.getElementById('resultado').innerHTML = "nada para calcular"
             }
         }
     </script>
