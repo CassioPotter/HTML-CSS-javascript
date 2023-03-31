@@ -26,6 +26,9 @@
         var posy = 50
         var objColor = "#00f"
 
+        var blockx = cnv.width/2 - 25
+        var blockx = cnv.height/2 - 25
+
         var mvLeft = mvUp = mvRigth = mvDown = false
 
         function upDateBlock()
@@ -103,6 +106,9 @@
         function draw()
         {
             ctx.clearRect(0, 0, cnv.width, cnv.height)
+            ctx.fillStyle = '#000'
+            ctx.fillRect(blockx, blocky, size, size)
+            ctx.fillStyle = objColor;
             ctx.fillRect(posx, posy, size, size);//cria uma caixa de preenchida
         }
         
