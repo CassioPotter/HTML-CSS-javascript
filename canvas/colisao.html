@@ -27,7 +27,7 @@
         var objColor = "#00f"
 
         var blockx = cnv.width/2 - 25
-        var blockx = cnv.height/2 - 25
+        var blocky = cnv.height/2 - 25
 
         var mvLeft = mvUp = mvRigth = mvDown = false
 
@@ -48,6 +48,17 @@
             if (mvDown)
             {
                 posy++
+            }
+        }
+
+        function colide()
+        {
+            if(posx + size > blockx && posx < blockx + size && posy + size > blocky && posy < blocky + size){
+                objColor = '#f00'
+            }
+            else
+            {
+                objColor = '#00F'
             }
         }
 
@@ -101,6 +112,7 @@
         function update()
         {
             upDateBlock()
+            colide()
         }
 
         function draw()
