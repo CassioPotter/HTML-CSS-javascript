@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMC</title>
     <style>
-        body{
+        body
+        {
             border: 20px outset blue;
             width: 500px;
             height: 300px;
@@ -40,7 +41,8 @@
     <div id="res"></div>
 
     <script>
-        function calcular(){
+        function calcular()
+        {
             var pe = window.document.getElementById('peso')
             var al = window.document.getElementById('altura')
             var p = Number(pe.value)
@@ -52,30 +54,39 @@
             var qua = a * a
             var imc = p / qua
 
-            if (imc <= 16){
+            if (imc <= 16)
+            {
                 res.innerHTML += `Peso muito baixo <strong>grave</strong> `
             }
-            else{
-                if (imc > 16 && imc < 16.99){
+            else
+            {
+                if (imc > 16 && imc < 16.99)
+                {
                     res.innerHTML += `peso baixo <strong>grave</strong>`
                 }
-                else{
-                    if (imc > 17 && imc < 18.40){
+                else
+                {
+                    if (imc > 17 && imc < 18.40)
+                    {
                         res.innerHTML += `Peso baixo `
                     }
                     else{
-                        if (imc > 18.5 && imc < 24.99){
+                        if (imc > 18.5 && imc < 24.99)
+                        {
                             res.innerHTML += `Peso normal`
                         }
                         else{
-                            if (imc > 25 && imc < 29.99){
+                            if (imc > 25 && imc < 29.99)
+                            {
                                 res.innerHTML += `Sobrepeso`
                             }
-                            else{
+                            else
+                            {
                                 if (imc > 30 && imc < 34.99){
                                     res.innerHTML += `obesidade grau 1`
                                 }
-                                else{
+                                else
+                                {
                                     if (imc > 35 && imc < 39.99){
                                         res.innerHTML += `Obesidade grau 2`
                                     }
