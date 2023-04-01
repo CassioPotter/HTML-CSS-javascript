@@ -14,26 +14,28 @@
     <br>
     Preço: <input type="number" id="valor">
     <br>
-    Quantidade:   <input type="number" name="quantidade" id="">
+    Quantidade: <input type="number" name="quantidade" id="">
     <br>
-    <input type="button" value="promoçao">
+    <input type="button" value="calcular" onclick="promocao()">
     <br>
-    Valor sem desconto<div id="semdesconto"></div>
+    Valor sem desconto <div id="semdesconto"></div>
     <br>
-    Valor com desconto<div id="comdesconto"></div>
+    Valor com desconto <div id="comdesconto"></div>
 
     <script>
-        var valor = window.document.getElementById('valor')
-        var varl = Number(valor.value)
-        var quantidade = window.document.getElementById('quantidade')
-        var quant = Number(quantidade.value)
-        var semdes = window.document.getElementById('semdesconto')
-        var comdes = window.document.getElementById('comdesconto')
-        var total = quant*varl
+        function promocao ()
+        {
+            var valor = window.document.getElementById('valor')
+            var varl = Number(valor.value)
+            var quantidade = window.document.getElementById('quantidade')
+            var quant = Number(quantidade.value)
+            var semdes = window.document.getElementById('semdesconto')
+            var comdes = window.document.getElementById('comdesconto')
+            var total = quant*varl
 
-        semdes.innerHTML += (`${total}`)
-        comdes.innerHTML += (`${total - (total*5/100)}`)
-
+            semdesconto.innerHTML += (`${total}`)
+            comdesconto.innerHTML += (`${total - (total*5/100)}`)
+        }
 
     </script>
     
