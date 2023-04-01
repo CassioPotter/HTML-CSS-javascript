@@ -20,7 +20,19 @@
     <input type="button" value="calcular" onclick="calcular()">
     <div id="resultado"></div>
 
-    
+    <script>
+        function calcular()
+        {
+            var  minutos = window.document.getElementById('minutos')
+            var resultado = window.document.getElementById('resultado')
+            var minutos = Number(minutos.value)
+            var tempo = minutos/15
+            var temp = Math.ceil(tempo)
+            var ress = temp*2
+
+            resultado.innerHTML += ress  
+        }
+    </script>
     
 </body>
 </html>
