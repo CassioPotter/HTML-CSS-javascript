@@ -29,8 +29,10 @@
         var quant = Number(quantidade.value)
         var semdes = window.document.getElementById('semdesconto')
         var comdes = window.document.getElementById('comdesconto')
-        
-        
+        var total = quant*varl
+
+        semdes.innerHTML += (`${total}`)
+        comdes.innerHTML += (`${total - (total*5/100)}`)
 
 
     </script>
