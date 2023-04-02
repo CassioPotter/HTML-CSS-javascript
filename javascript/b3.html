@@ -18,8 +18,41 @@
     </p>
     <input type="number" name="inVelocidade" id="inVelocidade">
     <br><br>
-    <input type="button" value="Calcular" onclick="btCalcular">
-    
+    <input type="button" value="Calcular" onclick="btCalcular()">
+    <br>
+    <h3 id="outMulta"></h3>
+
+    <script>
+        function btCalcular()
+        {
+            var inVelocidade = window.document.getElementById('inVelocidade')
+            var outMulta = window.document.getElementById('outMulta')
+            var inVelocidade = Number(inVelocidade.value)
+
+            outMulta.textContent = "Sua velocidade é de " + inVelocidade + "km/h  " 
+
+            if (inVelocidade < 60)
+            {
+                outMulta.textContent += "E você não recebeu uma multa"
+            }
+            else
+            {
+                if (inVelocidade > (60 * 20) / 100)
+                {
+                    outMulta.textContent += "Você recebeu uma multa leve"
+                }
+                else
+                {
+                    outMulta.textContent += "Você recebeu uma multa pesada"
+                }
+            }
+
+            
+
+           
+           
+        }
+    </script>
     
 </body>
 </html>
