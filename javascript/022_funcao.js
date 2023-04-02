@@ -1,6 +1,9 @@
 function soma(n1 = 0, n2 = 0)
 {
-   console.log(n1 + n2)
+    let res
+    res = n1+n2
+    return res
 }
 
-soma(2, 2)
+let resultadoSoma = soma(2, 2)
+console.log(resultadoSoma)
