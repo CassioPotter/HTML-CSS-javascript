@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C3</title>
+</head>
+<body>
+    <h1>
+        parquimetro
+    </h1>
+    <h2>
+        Valor maximo R$3.00
+    </h2>
+
+    valor R$: <input type="number" name="valor" id="inValor">
+    <input type="button" value="Confirme Tempo" onclick="btCalcular()">
+    <div id="outTempo"></div>
+    <div id="outTroco"></div>
+
+    <script>
+        function btCalcular()
+        {
+            var inValor = window.document.getElementById('inValor')
+            var inValor = Number(inValor.value)
+            var outTempo = window.document.getElementById('outTempo')
+            var outTroco = window.document.getElementById('outTroco')
+
+            outTempo.textContent = " "
+            outTroco.textContent = " "
+
+
+            
+            if (inValor < 1.00)
+            {
+                outTempo.textContent = "Valor minimmo R$ 1,00"
+            }
+            else
+            {
+                if (inValor >= 1.00 && inValor < 1.75) 
+                {
+                    outTempo.textContent = "tempo de 30m"
+                    outTroco.textContent = "Seu troco" + (inValor - 1.0)
+                }
+                else
+                {
+                    if (inValor >= 1.75 && inValor < 3.00)
+                    {
+                        outTempo.textContent = "tempo de 60m"
+                        outTroco.textContent = "Seu troco " + (inValor - 1.75)
+                    }
+                    else
+                    {
+                        if (inValor >= 3.00)
+                        {
+                            outTempo.textContent = "tempo de 120m"
+                            outTroco.textContent = "Seu troco" + (inValor - 3.0)
+                        }
+                        
+                    }
+                }
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>
