@@ -11,12 +11,25 @@
         Programa Par ou Impar
     </h1>
     Número: <input type="number" name="inNumero" id="inNumero">
+    <br><br>
+    <input type="button" value="Ver se é par ou Impar" onclick="btExibir()">
+    <h3 id="outResposta"></h3>
+    
+    <script>
+        function btExibir(){
+            var inNumero = window.document.getElementById('inNumero')
+            var outResposta = window.document.getElementById('outResposta')
 
-    <input type="button" value="Ver se é par ou Impar" id="btExibir">
-    <h3>
-        
-    </h3>
-    
-    
+            outResposta.textContent = ""
+
+            if( inNumero % 0){
+                outResposta.textContent = "Valor par"
+            }
+            else
+            {
+                outResposta.textContent = "Valor impar"
+            }
+        }
+    </script>
 </body>
 </html>
