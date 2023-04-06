@@ -93,6 +93,25 @@
         </div>
     </div>
 
-    
+    <script>
+        const content = document.querySelector('.content')
+        const btnNew = document.querySelector('addNote-content')
+
+        let item_db = localStorage.getItem('item_db')
+            ? JSON.parse(localStorage.getItem(item_db))
+            []
+
+        const colors = 
+        [
+            "#845EC2",
+            "#008F7A",
+            "#008E9B",
+            "#FFC75F",
+            "FF8066",
+            "#BA3CAF",
+
+        ]
+        const randomColor = () => colors[Math.floor(Math.random()* colors.length)]
+    </script>
 </body>
 </html>
