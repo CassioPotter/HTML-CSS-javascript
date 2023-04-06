@@ -8,12 +8,16 @@
 </head>
 <body>
     <input type="button" value="Clique " onclick="btHora()">
-    <p id="outHora"></p>
+    <p id="outHora">Vai aparecer aqui</p>
 
     <script>
       function btHora()
       {
-        alert('clicou')
+        
+        var outHora = document.getElementById('outHora')
+        
+        
+        outHora.innerHTML = Date()
       }
     </script>
 </body>
