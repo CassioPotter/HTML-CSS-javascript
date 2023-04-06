@@ -1,22 +1,26 @@
-* {
+* 
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
   }
   
-  body {
+  body 
+  {
     padding: 10px;
     background-color: #f7f7f7;
   }
   
-  .container {
+  .container 
+  {
     display: flex; 
     flex-wrap: wrap;
     gap: 10px;
   }
   
-  .addNote-content {
+  .addNote-content 
+  {
     display: flex; 
     flex-direction: column;
     align-items: center;
@@ -36,11 +40,13 @@
     font-size: xx-large;
   }
   
-  .content {
+  .content 
+  {
     display: contents;
   }
   
-  textarea {
+  textarea 
+  {
     padding: 5px;
     padding-top: 14px;
     outline: none;
@@ -52,22 +58,26 @@
     height: 150px;
   }
   
-  textarea::-webkit-scrollbar {
+  textarea::-webkit-scrollbar 
+  {
     width: 4px;
   }
-  textarea::-webkit-scrollbar-thumb {
+  textarea::-webkit-scrollbar-thumb 
+  {
     border-radius: 10px;
     background-color: #4B4453; 
   }
   
   
-  .item {
+  .item 
+  {
     position: relative;
     width: 200px;
     height: 150px;
   }
   
-  .remove {
+  .remove
+  {
     position: absolute;
     right: 6px;
     cursor: pointer;
