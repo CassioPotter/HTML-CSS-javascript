@@ -145,6 +145,35 @@
             content.appendChild(div)
         }
 
+        function addEvent()
+        {
+            const notes = document.querySelectorAll(".item textarea")
+            const remove = document.querySelectorAll(".item .remove")
+
+            notes.forEach((item, i) => {
+                item.oninput = () => {
+                    item_db[i] = {
+                        Text: item.value,
+                        color: item_db[i]?.color || item.parentElement.style.backgroundColor,
+                    }
+
+                    localStorage.setItem("item_db", JSON.stringify(item_db))
+                }
+            })
+
+            remove.forEach((item, i) => {
+                item.onclick = () => {
+                    content.children{i}.remove()
+                    if (item_db[i])
+                    {
+                        item_db.splice(i, 1)
+                        localStorage.setItem("items_db", JSON.stringify(item_db))
+                    }
+                    addEvent()
+                }
+            })
+        }
+
         function verifyNULL()
         {
             item_db = item_db.filter((item) => item)
