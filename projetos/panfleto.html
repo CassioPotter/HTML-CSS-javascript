@@ -112,6 +112,41 @@
 
         ]
         const randomColor = () => colors[Math.floor(Math.random()* colors.length)]
+
+        function loadItems()
+        {
+            content.innerHTML = ""
+            verifyNULL()
+
+            item_db.forEach((item) => {
+                addHTML(item)
+            })
+        }
+
+        btnNew.onclick = () => {
+            addHTML()
+        }
+
+        function addHTML(item)
+        {
+            const div = document.createElement("div")
+
+            div.innerHTML = `<div class = "item" style = "background-color: ${
+                item?.color || randomColor()
+            }">
+            <span class = "remove">x </span>
+            <textarea> $ {item?.text || ""}</textarea>
+            </dic>`
+
+            content.appendChild(div)
+        }
+
+        function verifyNULL()
+        {
+            item_db = item_db.filter((item) => item)
+            localStorage.setItem("item_db", JSON.stringify(item_db))
+        }
+
     </script>
 </body>
 </html>
