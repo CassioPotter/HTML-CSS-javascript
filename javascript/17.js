@@ -1,3 +1,4 @@
+
 let amigo = {
     nome: 'cassio',
     sexo: 'm',
